@@ -1,6 +1,6 @@
 """Shipping procedures for Ubermelon."""
 
-import sys
+import sys #arguments for command line need this
 from melons import Melon, Squash
 import robots
 
@@ -41,7 +41,8 @@ def assess_and_pack_orders():
         return
 
     # Get the name of the log file to open from the command line
-    logfilename = sys.argv[1]
+    logfilename = sys.argv[1] # this is essentially the file at index 1
+    #argv = argument vectors
 
     # Open the log file
     file = open(logfilename)

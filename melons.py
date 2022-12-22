@@ -32,7 +32,12 @@ class Melon:
             return f"{self.color} {self.weight:.2f} lbs {self.melon_type}"
 
 
-class Squash(Melon):
+class Squash(Melon): #referring to parent/super class Melon
     """Winter squash."""
-
-    # FIX ME: Add Squash class definition here.
+    def prep(self):
+        super().prep() # calling method prep() from parent class (seen above)
+        robots.painterbot.paint(self) # since we used super, only need to call paintbot
+        
+        # robots.cleanerbot.clean(self)
+        # robots.stickerbot.apply_logo(self)
+        # robots.painterbot.paint(self) # this is a chunkier version
